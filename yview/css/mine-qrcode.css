@@ -1,0 +1,20 @@
+.login-wx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .login-wx .qrcode {
+    width: 280px;
+    height: 280px;
+    margin: 20px 0; }
+  .login-wx p {
+    color: #999; }
+
+/*# sourceMappingURL=mine-qrcode.css.map */

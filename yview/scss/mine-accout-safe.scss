@@ -1,0 +1,130 @@
+@charset 'utf-8';
+@import './mine-default.scss';
+$wx:#58bc46;
+// 修改默认tab样式
+.nav-tabs {
+  text-align: center;
+  border-bottom-width: 3px;
+  li {
+    display: inline-block;
+    float: none;
+    font-size: 0;
+    margin: 0 30px;
+    margin-bottom: -3px;
+    a {      
+      height: 60px;
+      line-height: 60px !important;
+      font-size: 20px;
+      font-weight: 600;
+      color: #999;
+      border: 0;
+      font-family: 'microsoft yahei';
+    }
+  }
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  color: #555;
+  cursor: default;
+  border: 0;
+  border-bottom: 3px solid #ea5504;
+}
+.nav>li>a:focus, .nav>li>a:hover {background-color: transparent;border-color: transparent;}
+// 退出栏
+.logins {
+  height: 35px;
+  line-height: 35px;
+  margin-top: 20px;
+  padding-right: 100px;
+  text-align: right;
+  a {
+    font-size: 13px;
+    color: #e5b350;
+    padding: 0 10px;
+    text-decoration: none;
+    outline: 0;
+    &.admin {
+      border-right: 1px solid #333;
+    }
+    &:hover {
+      color: rgb(247, 137, 12);
+    }
+  }
+}
+// 安全管理栏
+.account {
+  .tab-pane {
+    ul{
+      display: flex;
+      margin: 0;
+      li {
+        height: 60px;
+        padding: 4px;      
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  .handle {
+    flex: 1;
+    justify-content: center;
+    button {
+      width: 100px;
+      height: 36px;
+      line-height: 36px;
+      background-color: #ea5504;
+      color: #fff;
+      border-radius: 5px;
+      border: 0;
+      outline: 0;
+      letter-spacing: 1px;
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}
+// 账号安全样式
+#safe {
+  width: 820px;
+  margin: 60px auto;
+  ul {
+    .null {
+      flex: 1;
+    }
+    .id {
+      flex:1;
+    }
+    .information {
+      flex: 4;
+    }
+  }
+}
+// 第三方账号绑定
+#third {
+  width: 550px;
+  margin: 60px auto;
+  ul {
+    li {
+      margin-bottom: 20px;
+    }
+    .icon {
+      flex:1;
+      .fa {        
+        font-size: 40px;
+        border: 1px solid $wx;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        color: $wx;
+      }
+    }
+    .name {
+      flex: 1;
+    }
+    .bind {
+      flex: 1;
+    }
+  }
+}

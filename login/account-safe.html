@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>账号安全管理</title>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <link rel="shortcut icon" href="../yview/img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../yview/css/mine-accout-safe.css">
+</head>
+<body>
+  <div class="logins">
+    <a href="##" class="admin">admin</a>
+    <a href="##" class="exit" data-toggle="modal" data-target="#exit">退出</a>    
+    <!-- 退出模态框 -->
+    <div class="modal fade" id="exit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+              &times;
+            </button>
+            <h4 class="modal-title" id="myModalLabel">提示</h4>
+          </div>
+          <div class="modal-body">
+              你确定要退出吗？
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消 </button>
+            <button type="button" class="btn btn-primary btn-mine"> 确定 </button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal -->
+    </div>
+  </div>
+  <div class="account">
+    <div class="tab">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#safe" data-toggle="tab">账号安全</a></li>
+        <li><a href="#third" data-toggle="tab">第三方账号绑定</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="safe">
+          <ul>
+            <li class="id"><span>用户名</span></li>
+            <li class="information"><span>admin</span></li>
+            <li class="null"></li>
+            <li class="handle"><button type="button">修改</button></li>
+          </ul>
+          <ul>
+            <li class="id"><span>邮箱账号</span></li>
+            <li class="information"><span>未绑定邮箱，绑定后可使用该邮箱直接登录</span></li>
+            <li class="null"></li>
+            <li class="handle"><button type="button" onclick="toUrl('./bind-ems.html')">绑定</button></li>
+          </ul>
+          <ul>
+            <li class="id"><span>手机账号</span></li>
+            <li class="information"><span>可以使用手机13*******67马上登录</span></li>
+            <li class="null"></li>
+            <li class="handle"><button type="button" onclick="toUrl('./modify-tel.html')">修改</button></li>
+          </ul>
+          <ul>
+            <li class="id"><span>登录密码</span></li>
+            <li class="information"><span>密码要求至少包含字母，符号或数字中的两项且长度超过6位， 建议您经常修改密码，以保证帐号更加安全。</span></li>
+            <li class="null"></li>
+            <li class="handle"><button type="button" onclick="toUrl('./modify-pass.html')">修改</button></li>
+          </ul>
+        </div>
+        <div class="tab-pane" id="third">
+          <ul>
+            <li class="icon"><span class="fa fa-weixin"></span></li>
+            <li class="name"><span>微信</span></li>
+            <li class="bind">未绑定</li>
+            <li class="handle"><button type="button" onclick="toUrl('./login-wx.html')">绑定</button></li>
+          </ul>
+          <ul>
+            <li class="icon"><span class="fa fa-weixin"></span></li>
+            <li class="name"><span>微信</span></li>
+            <li class="bind"><span></span>admin</span></li>
+            <li class="handle"><button type="button" data-toggle="modal" data-target="#myModal">解绑</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 账号模态框 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+              &times;
+            </button>
+            <h4 class="modal-title" id="myModalLabel">提示</h4>
+          </div>
+          <div class="modal-body">
+              你确定要解除绑定吗？
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消 </button>
+            <button type="button" class="btn btn-primary btn-mine" data-dismiss="modal"> 确定 </button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal -->
+    </div>
+  </div>
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+  function toUrl(url){
+    window.location.assign(url);
+  }
+</script>
+</body>
+</html>

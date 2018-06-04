@@ -1,0 +1,140 @@
+@charset "utf-8";
+$theme-color:#ccc;
+$border-color:#ccc;
+$font-size:12px;
+$hover-color:#ea5504;
+$weixin:#58bc46;
+html,body {
+  height: 100%;
+  background-image: radial-gradient(#fff,#f0d756,#ec9d5b,#f95000);
+}
+#root {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  display: flex;
+}
+#login {
+  padding: 20px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  display: flex;
+  // 左侧
+  .lg-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logo {
+      height: 100%;
+      display: flex;
+      padding-right: 10px;
+      align-items: center;
+      border-right: 1px solid $border-color;
+    }
+  }
+  // 右侧
+  .lg-right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: $font-size;
+    margin-left: 35px;
+    .lg-tit {
+      margin-bottom: 25px;
+    }
+    #lg-form {
+      display: inline-grid;
+      label {
+        font-weight: normal;
+        margin-bottom: 10px;
+        position: relative;
+        span {
+          position: absolute;
+          font-size: 21px;
+          top: 8px;
+          left: 10px;
+          color: $theme-color;
+          transition: all .3s;
+        }
+        // 错误信息
+        &.error input {
+          border-color: $hover-color;
+          &::-webkit-input-placeholder{
+            color: $hover-color;
+          }
+          & + span {
+            color: $hover-color;
+          }          
+        }
+      }
+      // 输入框// 提交按钮
+      input,button {
+        display: block;
+        width: 310px;
+        height: 37px;
+        line-height: 37px;
+        background: transparent;
+        border: 1px solid $border-color;
+        border-radius: 20px;
+        padding: 0 35px;
+        font-size: $font-size;
+        letter-spacing: 1px;
+        color: #555;
+        outline: 0;
+        transition: all .3s;
+        &::-webkit-input-placeholder {
+          color: $theme-color;
+        }
+      }
+      input:focus,input:hover {
+        border-color: $hover-color;
+        & + span {
+          color: $hover-color;
+        }
+      }
+      button {
+        color: $theme-color;
+      }
+      button:hover,button:focus {
+        background-color: $hover-color;
+        color: #fff;
+      }
+    }
+    // 忘记密码
+    .forget {
+      margin: 10px 0;
+      margin-left: auto;
+      text-decoration: none;
+      transition: all .3s;
+      color: $theme-color;
+      &:hover {
+        color: #f00;
+      }
+    }
+    .lg-quick {
+      color: $theme-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .weixin {
+        font-size: 30px;
+        text-decoration: none;
+        border-radius: 50%;
+        border: 1px solid $theme-color;
+        padding: 6px;
+        transition: all .3s;
+        color: $theme-color;
+        &:hover {
+          color: $weixin;
+          border-color: $weixin;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,145 @@
+html, body {
+  height: 100%;
+  background-image: radial-gradient(#fff, #f0d756, #ec9d5b, #f95000); }
+
+#root {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+#login {
+  padding: 20px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  #login .lg-left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    #login .lg-left .logo {
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding-right: 10px;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      border-right: 1px solid #ccc; }
+  #login .lg-right {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 12px;
+    margin-left: 35px; }
+    #login .lg-right .lg-tit {
+      margin-bottom: 25px; }
+    #login .lg-right #lg-form {
+      display: inline-grid; }
+      #login .lg-right #lg-form label {
+        font-weight: normal;
+        margin-bottom: 10px;
+        position: relative; }
+        #login .lg-right #lg-form label span {
+          position: absolute;
+          font-size: 21px;
+          top: 8px;
+          left: 10px;
+          color: #ccc;
+          -webkit-transition: all .3s;
+          transition: all .3s; }
+        #login .lg-right #lg-form label.error input {
+          border-color: #ea5504; }
+          #login .lg-right #lg-form label.error input::-webkit-input-placeholder {
+            color: #ea5504; }
+          #login .lg-right #lg-form label.error input + span {
+            color: #ea5504; }
+      #login .lg-right #lg-form input, #login .lg-right #lg-form button {
+        display: block;
+        width: 310px;
+        height: 37px;
+        line-height: 37px;
+        background: transparent;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        padding: 0 35px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        color: #555;
+        outline: 0;
+        -webkit-transition: all .3s;
+        transition: all .3s; }
+        #login .lg-right #lg-form input::-webkit-input-placeholder, #login .lg-right #lg-form button::-webkit-input-placeholder {
+          color: #ccc; }
+      #login .lg-right #lg-form input:focus, #login .lg-right #lg-form input:hover {
+        border-color: #ea5504; }
+        #login .lg-right #lg-form input:focus + span, #login .lg-right #lg-form input:hover + span {
+          color: #ea5504; }
+      #login .lg-right #lg-form button {
+        color: #ccc; }
+      #login .lg-right #lg-form button:hover, #login .lg-right #lg-form button:focus {
+        background-color: #ea5504;
+        color: #fff; }
+    #login .lg-right .forget {
+      margin: 10px 0;
+      margin-left: auto;
+      text-decoration: none;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      color: #ccc; }
+      #login .lg-right .forget:hover {
+        color: #f00; }
+    #login .lg-right .lg-quick {
+      color: #ccc;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      #login .lg-right .lg-quick .weixin {
+        font-size: 30px;
+        text-decoration: none;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        padding: 6px;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+        color: #ccc; }
+        #login .lg-right .lg-quick .weixin:hover {
+          color: #58bc46;
+          border-color: #58bc46; }
+
+/*# sourceMappingURL=mine-login.css.map */

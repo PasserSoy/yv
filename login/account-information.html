@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>账号信息</title>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../yview/css/mine-findpassword.css">
+  <link rel="stylesheet" href="../yview/js/adress/pick-pcc.css">
+  <link rel="shortcut icon" href="../yview/img/favicon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div id="root">
+    <div class="find acInfor">
+      <div class="head">
+        <img src="../yview/img/user.png" alt="头像" class="headicon" data-toggle="modal" data-target="#headicon">
+      </div>
+      <form action="" id="acInfor-form" class="form">
+        <h3 class="f-tit account-tit">基本信息</h3>
+        <!-- 手机号码 -->
+        <article class="f-int">
+          <span class="tits">手机号码: </span>
+          <input type="text" id="acInfortel" class="f-input" maxlength="11" value="13312345678" readonly>
+          <a href="javascript:;" class="acInforTo modify">修改</a>
+        </article>
+        <!-- 邮箱 -->
+        <article class="f-int">
+          <span class="tits">邮箱: </span>
+          <input type="text" id="acInforems" class="f-input" value="ghghgg@123.com" readonly>
+          <a href="javascript:;" class="acInforTo ems">去绑定</a>
+        </article>
+        <!-- 性别 -->
+        <article class="f-int">
+          <span class="tits">性别: </span>
+          <div class="sex">
+            <label for="man"><input type="radio" name="sex" id="man" checked><i></i> 男</label>
+            <label for="woman"><input type="radio" name="sex" id="woman"><i></i> 女</label>
+          </div>
+        </article>
+        <!-- 所在地 -->
+        <article class="f-address">
+          <span class="tits">所在地: </span>
+          <div class="choose-address">
+              <div class="pick-area pick-area1" name="广东省/深圳市/宝安区"></div>
+          </div>
+        </article>
+        <!-- 微信号 -->
+        <article class="f-int">
+          <span class="tits">微信号: </span>
+          <input type="text" id="acInforwx" value="ghghggfewafe" readonly>
+          <a href="javascript:;" class="acInforTo wx">去绑定</a>
+        </article>
+        <!-- 备注 -->
+        <article class="f-int note-int">
+          <span class="tits">备注: </span>
+          <textarea name="note" id="note" cols="30" rows="10"></textarea>
+        </article>
+        <button type="button" class="sure f-int save">保存</button>
+      </form>
+    </div>
+  </div>
+<!-- 头像模态框 -->
+<div class="modal fade" id="headicon" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          &times;
+        </button>
+        <h4 class="modal-title" id="myModalLabel">提示</h4>
+      </div>
+      <div class="modal-body">
+          <form action="" id="headform">            
+            <div class="choose-left">
+              <input type="file" name="" id="fileup">
+              <span class="addImg">+</span>
+              <p class="add">增加图片</p>
+              <p class="only">只支持JPG、PNG、GIF，大小不超 过5M建议尺寸240*240</p>
+            </div>
+            <div class="choose-right">                
+              <img src="../yview/img/user.png" alt="头像预览" class="headicon-small">
+              <p class="preview">头像预览</p>
+            </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消 </button>
+        <button type="button" class="btn btn-primary btn-mine"> 确定 </button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</div>
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../yview/js/adress/pick-pcc.js"></script>
+<script src="../yview/js/mine-acInfor.js"></script>
+<script>
+  $(".pick-area1").pickArea();
+</script>
+</body>
+</html>
